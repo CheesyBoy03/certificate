@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  color: #3f3f3f;
+}
+
+body {
+  background-color: #f5f1e6;
+  min-height: 100%;
+}
+
+.header {
+  width: min(90%, 1200px);
+  height: 85px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  font-weight: bold;
+  height: fit-content;
+}
+
+#certificate {
+  position: relative;
+  padding-top: 56.25%;
+  margin: auto;
+}
+
+.main {
+  width: min(95%, 900px);
+  margin: auto;
+}
+
+#certificate::before {
+  display: block;
+  content: "";
+  width: min(90%, 700px);
+}
+
+.certificate__wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 5px solid #f2bc6b;
+  border-radius: 10px;
+  background-image: url("images/background.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5vh 2vh;
+}
+
+.certificate__wrapper .top-part {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  position: relative;
+}
+
+#certificate img.ribbon {
+  position: absolute;
+  top: 0;
+  right: 5vw;
+  width: 20vw;
+  height: 50%;
+  z-index: 2;
+}
+
+.certificate__wrapper p {
+  font-size: 2vw;
+}
+
+.certificate__wrapper h2 {
+  font-size: 2.7vw;
+}
+
+@media (min-width: 900px) {
+  .certificate__wrapper p {
+    font-size: 14px;
+  }
+
+  .certificate__wrapper h2 {
+    font-size: 24px;
+  }
+}
+
+.certificate__wrapper .bottom-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.certificate__wrapper .bottom-part .signature img {
+  width: 20vw;
+}
+
+.certificate__wrapper .bottom-part .issue-date {
+  width: 30%;
+}
+
+.button-group {
+  padding-top: 30px;
+  width: 220px;
+  display: flex;
+  gap: 20px;
+  margin: auto;
+}
+
+.button-group button {
+  flex: 1;
+  height: 50px;
+  background: none;
+  border: 1px solid #3f3f3f;
+  border-radius: 50px;
+  color: #3f3f3f;
+  font-size: 18px;
+}
+
+.footer {
+  width: min(90%, 1200px);
+  height: 30px;
+  margin: auto;
+  border-top: 1px solid #3f3f3f;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
