@@ -31,7 +31,7 @@ body {
 }
 
 .main {
-  width: min(95%, 900px);
+  width: min(95%, 800px);
   margin: auto;
 }
 
@@ -89,6 +89,19 @@ body {
   .certificate__wrapper h2 {
     font-size: 24px;
   }
+
+  #certificate img.ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20vw;
+    height: 50%;
+    z-index: 2;
+  }
+
+  .signature img {
+    width: 10px;
+  }
 }
 
 .certificate__wrapper .bottom-part {
@@ -99,6 +112,7 @@ body {
 
 .certificate__wrapper .bottom-part .signature img {
   width: 20vw;
+  max-width: 200px;
 }
 
 .certificate__wrapper .bottom-part .issue-date {
