@@ -54,6 +54,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5vh 2vh;
+  box-shadow: 3px 5px 40px rgba(0, 0, 0, .17);
 }
 
 .certificate__wrapper .top-part {
@@ -128,13 +129,21 @@ body {
 }
 
 .button-group button {
-  flex: 1;
+  width:  50px;
   height: 50px;
   background: none;
   border: 1px solid #3f3f3f;
   border-radius: 50px;
   color: #3f3f3f;
   font-size: 18px;
+  cursor: pointer;
+}
+
+.button-group button img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .footer {
