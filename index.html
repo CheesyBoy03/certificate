@@ -22,7 +22,7 @@
     </header>
 
     <main class="main">
-      <iframe src="certificate.html" id="myIframe" width="90%">
+      <iframe src="certificate.html" width="100%">
         Sorry, but need to change browser!
       </iframe>
       <div class="button-group">
@@ -45,14 +45,14 @@
 
     <script>
       // Selecting the iframe element
-      var iframe = document.getElementById("myIframe");
+      var iframe = document.querySelector("iframe");
 
-      // Adjusting the iframe height onload event
-      iframe.onload = function () {
-        iframe.style.height = `${
-          iframe.contentWindow.document.body.scrollHeight + 20
-        }px`;
-      };
+      iframe.addEventListener("load", function () {
+        setInterval(function () {
+          iframe.style.height =
+            iframe.contentDocument.body.scrollHeight + 20 + "px";
+        }, 500);
+      });
     </script>
   </body>
 </html>
